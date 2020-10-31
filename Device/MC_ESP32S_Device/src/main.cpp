@@ -1,18 +1,20 @@
 #include <Arduino.h>
-#include <WiFi.h>
-#include <queue>
+#include <wifi.h>
+
 using namespace std;
-#include "xml.h"
+
 #include "http.h"
 #include "time.h"
 
-#include "readings.h"
-#include "wifi_con.h"
+#include "sensor_readings.h"
+#include "wifi.h"
 #include "config.h"
-#include "utils.h"
+#include "calAndXmlUtils.h"
 
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+#include <queue>
+
 
 /*
 Initialize the relevant variables
