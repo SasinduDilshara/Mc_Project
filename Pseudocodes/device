@@ -1,0 +1,52 @@
+
+setUp(){
+    Serial.begin()
+    connectWifi()
+    startSensors()
+    initialize buffers and variables
+    configTime()
+}
+
+loop(){
+    
+    while buffers not empty
+        if(Wifi connected)
+           values = get the first elements in the buffer
+           generateCapXML(values)
+           sent = sendDataToServer(capXML)
+           if (network failure)
+                break
+            else if(success)
+                remove the first element in buffers
+        else if(wifi disconnected)
+            break
+        
+    while time < 15 minutes
+        store the sensor values in arrays
+    
+    calculate the mean and sd of informations
+    
+    getcurrenttime()
+    
+    create unique identifier()
+    generate cap xml()
+    
+    if(Wifi not connected)
+        try to connect wifi()
+        if(wifi connected)
+            send data to server()
+            if (network failure)
+                append informations into buffers()
+            else if(success)
+                print success
+        if(wifi connection failed)
+            append informations into buffers()
+    
+    else
+        send data to server()
+        if (network failure)
+            append informations into buffers()
+        else if(success)
+            print success
+        
+}

@@ -125,7 +125,7 @@ while (!codes.empty())
   int iter = 0;
   
   
-  int rounds_per_send = 10;
+  int rounds_per_send = 900;
   int rounddelay = 1000;
 
 
