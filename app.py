@@ -142,8 +142,11 @@ def data_insert(data):
 
 @app.route('/')
 def index():
-    html_display = Database.query.order_by(desc(Database.timestamp)).limit(30).all()
-    return render_template("index.html", table=html_display)
+    '''
+    This will deliver the data to html page and it will show the last ive information updates.
+    '''
+    html_display = Database.query.order_by(desc(Database.timestamp)).limit(5).all()
+    return render_template("dashboard.html", table=html_display)
 
 @app.route('/insert', methods=['POST'])
 def post():
