@@ -1,0 +1,17 @@
+If POST request receive to server from microcontroller
+    request_body = request.data
+    extracted_data = extract_capxml(request_body)
+    result = insert_data_to_database(extracted_data)
+
+If GET request receive to the server from user
+    Data = Query data from database
+    Display data in dashboard
+
+Function extract_capxml(capxml){
+Return mean and standard deviation values from request body
+}
+
+Function insert_data_to_database(data){
+    Initialize database connection
+    Send data to the database
+}
